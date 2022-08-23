@@ -1,20 +1,25 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom;"
-import HomeScreen from"./screens/HomeScreen";
-import ContactScreen from "./screen/DetailtScreen";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import AboutScreen from "./screens/AboutScreen";
 import ContactScreen from "./screens/ContactScreen";
-import HomeScreen from "screens/HomeScreen";
+import DetailsScreen from "./screens/DetailsScreen";
+import HomeScreen from "./screens/HomeScreen";
+import Header from "./components/Header";
 
 function App() {
   return (
     <BrowserRouter>
       <div>
-      <Routes>
-        <Route Path="/" element={<HomeScreen />} />
-        <Route Path="/contact" element={<ContactScreen/>} />
-        <Route Path="/about" element={<AboutScreen />} />
-        <Route Path="detail/:name" element={<DetailScreen />} />
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/about" element={<AboutScreen />} />
+          <Route path="/contact" element={<ContactScreen />} />
+          <Route path="/details:name" element={<DetailsScreen />} />
         </Routes>
-        <div/>
+      </div>
     </BrowserRouter>
-  )
+  );
 }
+
+export default App;

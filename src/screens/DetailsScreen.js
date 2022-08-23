@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ContactScreen() {
+function DetailsScreen() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function ContactScreen() {
   )
 }
 
-export default ContactScreen
+export default DetailsScreen
